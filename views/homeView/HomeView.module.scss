@@ -1,0 +1,14 @@
+@import "@/styles/imports";
+
+.section {
+	.votes {
+		width: 100%;
+		@extend %center;
+		padding-inline: 14.4rem;
+	}
+	@media (max-width: 650px) {
+		.votes {
+			padding-inline: 2rem;
+		}
+	}
+}

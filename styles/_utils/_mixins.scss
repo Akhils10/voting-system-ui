@@ -1,0 +1,40 @@
+@use "../_utils/responsive";
+
+// centered container
+%center {
+	display: grid;
+	place-items: center;
+}
+
+@mixin noScrollBar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	& {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
+
+// flexbox
+@mixin flex($justify: flex-start, $align: flex-start, $flow: row wrap) {
+	flex-flow: $flow;
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// grid
+@mixin grid(
+	$columns: repeat(auto-fit, minmax(20%, 1fr)),
+	$column-gap: 1rem,
+	$row-gap: 1rem
+) {
+	display: grid;
+	grid-template-columns: $columns;
+	column-gap: $column-gap;
+	row-gap: $row-gap;
+}
+@mixin boxShadow($x: 0.3, $y: 0.3, $color: $col-grey-40000) {
+	box-shadow: $x + rem $y + rem $color;
+}

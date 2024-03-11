@@ -1,0 +1,36 @@
+@import "@/styles/imports";
+
+.modal {
+	.body {
+        height: 12rem;
+		padding-block: 2.4rem;
+        overflow-y: auto;
+		.button {
+            padding: 0.6rem 2rem;
+			height: 4rem;
+		}
+        p {
+            font-size: 1.2rem;
+			line-height: 1.8rem;
+			color: #c7d2da;
+		}
+	}
+	.footer {
+		@include flex(space-around, center, nowrap);
+		gap: 3rem;
+		width: 100%;
+		margin-top: 3rem;
+		.button_ok {
+			width: 100%;
+			background-color: rgba(#9d61fa, 0.5);
+			color: #fff;
+			height: 4rem;
+		}
+		.button_cancel {
+			width: 100%;
+			color: #9d61fa;
+			background-color: #fff;
+			height: 4rem;
+		}
+	}
+}

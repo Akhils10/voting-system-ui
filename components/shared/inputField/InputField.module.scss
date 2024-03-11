@@ -1,0 +1,65 @@
+@import "@/styles/imports";
+
+.input {
+	width: 100%;
+	row-gap: 0.7rem;
+	@include flex(flex-start, flex-start, column);
+}
+
+.input_label {
+	font-size: 1.6rem;
+	line-height: 152.2%;
+	// color: $col-grey-50;
+	// font-family: $font-medium;
+	font-weight: 500;
+}
+
+.input_wrapper {
+	position: relative;
+	width: 100%;
+	padding: 0.8rem 1.6rem 0.8rem 0;
+	height: 6rem;
+	column-gap: 1rem;
+	border: 0.1rem solid rgba(#9d61fa, 0.5);
+	border-radius: 0.8rem;
+	transition: all 0.1s ease-in;
+
+	@include flex(flex-start, center, row nowrap);
+
+	&:focus-within {
+		transition: all 0.3s linear;
+		border-color: #9d61fa;
+	}
+}
+
+.input_icon {
+	position: relative;
+	bottom: 0.3rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	flex-shrink: 0;
+}
+
+.input_field {
+	all: unset;
+	flex-grow: 1;
+	height: 100%;
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+	padding: 1.2rem 1.6rem;
+	width: 100%;
+	color: #c1c0be;
+	&::placeholder {
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+	}
+}
+
+.icon {
+	position: relative;
+	width: 1.6rem;
+	height: 1.6rem;
+	cursor: pointer;
+	border: none !important;
+	padding: none !important;
+}
