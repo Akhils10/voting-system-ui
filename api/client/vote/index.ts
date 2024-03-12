@@ -6,7 +6,7 @@ export interface Topic {
 }
 
 export const axiosInstance = axios.create({
-	baseURL: process.env.BASE_API_URL || "http://localhost:3003/api/v1",
+	baseURL: process.env.NEXT_PUBLIC_BASE_API_URL || "http://localhost:3003/api/v1",
 	headers: { "content-Type": "application/json" },
 });
 

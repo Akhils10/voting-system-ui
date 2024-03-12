@@ -7,7 +7,7 @@ import { useAppSelector } from "@/store";
 import useFetchTopics from "@/hooks/useVote";
 
 const HomeView = () => {
-	useFetchTopics({ refetchInterval: false });
+	useFetchTopics({ refetchInterval: 3000 });
 	const topics = useAppSelector(state => state.vote.topics);
 	return (
 		<section className={styles.section}>
