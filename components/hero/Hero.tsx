@@ -9,6 +9,7 @@ import { Topic, setRefetch } from "@/store/voteSlice";
 import { useVoteMethods } from "@/hooks/useVote";
 import VoteOptionsModal from "../modals/voteOptionsModal/VoteOptionsModal";
 import { useAppDispatch } from "@/store";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export type TopicDetails = {
 	title: string;
@@ -26,6 +27,7 @@ const Hero = () => {
 	});
 
 	const handlecCreateTopicBtn = () => {
+		sendGTMEvent({ event: 'buttonClicked', value: 'xyz' })
 		if (!topicDetails.title) {
 			toast.error("Input field cannot be empty");
 			return;
