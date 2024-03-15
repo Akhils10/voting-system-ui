@@ -4,7 +4,6 @@ import "@/styles/index.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import Providers from "./provider";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,12 +26,11 @@ export default function RootLayout({
 					content="Voting system powered by Solana contract"
 				/>
 				<link rel="icon" href="/favicon.ico" />
-				<Script async src="https://www.googletagmanager.com/gtag/js?id=G-2X867N3PGK"></Script>
 			</head>
 			<body className={inter.className}>
 				<Providers>{children}</Providers>
 			</body>
-			<GoogleAnalytics gaId="G-2X867N3PGK" />
+			<GoogleTagManager gtmId="GTM-N66P32NR" />
 		</html>
 	);
 }
